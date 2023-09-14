@@ -44,7 +44,7 @@ function TaskModel(props) {
   };
   const createTask = async (values) => {
     try {
-      const url = `${process.env.API_BASE_URL}/task`;
+      const url = `${process.env.REACT_APP_API_BASE_URL}/task`;
       const res = await axios.post(url, values);
       res.data && displaySuccessMessage("Created");
     } catch (err) {
@@ -53,7 +53,7 @@ function TaskModel(props) {
   };
   const editTask = async (id, values) => {
     try {
-      const url = `${process.env.API_BASE_URL}/task/${id}`;
+      const url = `${process.env.REACT_APP_API_BASE_URL}/task/${id}`;
       const res = await axios.put(url, values);
       res.data && displaySuccessMessage("Edited");
     } catch (err) {

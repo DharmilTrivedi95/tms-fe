@@ -28,7 +28,7 @@ function TaskList(props) {
   };
   const onDeleteTask = async (record) => {
     try {
-      const url = `${process.env.API_BASE_URL}/task/${record._id}`;
+      const url = `${process.env.REACT_APP_API_BASE_URL}/task/${record._id}`;
       const res = await axios.delete(url);
       if(res.data) {
         displaySuccessMessage();

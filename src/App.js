@@ -15,7 +15,7 @@ function App() {
   const [list, setList] = useState(false);
 
   const getTasks = async () => {
-    const url = `${process.env.API_BASE_URL}/task`;
+    const url = `${process.env.REACT_APP_API_BASE_URL}/task`;
     let res = await axios.get(url);
     setList(res.data || []);
   };
